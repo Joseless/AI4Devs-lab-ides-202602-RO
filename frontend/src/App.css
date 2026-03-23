@@ -1,38 +1,99 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: #f5f7fb;
+  color: #102a43;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.candidate-section {
+  width: 100%;
+  max-width: 780px;
+}
+
+.candidate-section h1 {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+}
+
+.candidate-form {
+  margin-top: 1rem;
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 12px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-field input {
+  border: 1px solid #bcccdc;
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  font-size: 1rem;
+}
+
+.form-field input:focus {
+  outline: 2px solid #486581;
+  outline-offset: 1px;
+}
+
+.primary-button {
+  align-self: flex-start;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: #1f6feb;
+  color: #ffffff;
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.field-error {
+  color: #b42318;
+  font-size: 0.85rem;
+}
+
+.feedback-success,
+.feedback-error {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.feedback-success {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.feedback-error {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+@media (max-width: 600px) {
+  .candidate-section h1 {
+    font-size: 1.4rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .candidate-form {
+    padding: 1rem;
   }
 }
